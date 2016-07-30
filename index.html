@@ -2,43 +2,35 @@
     <head>
         <base href="\" />
         <title>My PokeDex</title>
-        <style type="text/css">
-           
-             .big-circle {
-                border: 1px solid;
-                border-radius: 50%;
-                width: 500px;
-                height: 500px;
-            }
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            .container{
-                background-color:#20202f;
-                height:100%;
-                width:100%;
-            } 
-
-            .pokeball-container{
-                background-color:#fff;
-                height:100%;
-                width:100%;
-            }
-
-            body {
-               
-            }       
-        </style>
+        <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="app/app.component.css" rel="stylesheet" />
+        <!-- 1. Load libraries -->
+        <!-- IE required polyfills, in this exact order -->
+        <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+        <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+        <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/rxjs/bundles/Rx.js"></script>
+        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+        <!-- 2. Configure SystemJS -->
+        <script>
+        System.config({
+        packages: {
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+        </script>
     </head>
 <body>
-    <nav>
-
-    </nav>
-    <div class="container">
-        
-        <div class="pokeball-container"> </div>
-        <div class="big-circle">
-
-
-        </div>
-    </div>
+    <poke-dex></poke-dex>
+  
 </body>
-</html>
+</html> 

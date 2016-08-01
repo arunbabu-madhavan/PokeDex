@@ -7,5 +7,5 @@
     "**/*.js":true
 
 },
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "onFocusChange"
 }

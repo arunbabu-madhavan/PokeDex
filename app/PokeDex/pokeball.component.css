@@ -1,0 +1,64 @@
+
+
+
+
+.pokeball-red-container {
+    background-color: #f00;
+    height: 250px;
+    width: 500px;
+    float: left;
+    position: relative;
+    border-top-left-radius: 253px;
+    border-top-right-radius: 253px;
+    border: solid 3px #000;
+    -webkit-transition: all 1s linear 2s;
+    -moz-transition: all 1s linear 2s;
+    transition: all 1s linear 2s;
+}
+
+.pokeball-white-container {
+    background-color: #fff;
+    height: 250px;
+    width: 500px;
+    float: left;
+    position: relative;
+    -webkit-transition: all 1s linear 2s;
+    -moz-transition: all 1s linear 2s;
+    transition: all 1s linear 2s;
+    border: solid 3px #000;
+    border-bottom-left-radius: 253px;
+    border-bottom-right-radius: 253px;
+}
+
+
+.rotating-pokeball {
+   -webkit-transition: all 2s ease-out 0s;
+    -moz-transition: all 2s ease-out 0s;
+    transition: all 2s ease-out 0s;
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+input[type=checkbox]:checked ~ div.pokeball-white-container {
+    -moz-transform:  translateY(300%);
+    -webkit-transform:  translateY(300%);
+    transform: translateY(300%);
+}
+input[type=checkbox]{
+                  position:absolute;
+                  top:50%;
+                  left:50%;
+                  z-index:100;
+              }
+input[type=checkbox]:checked ~ div.pokeball-red-container {
+    transform: translateY(-300%);
+     -moz-transform:  translateY(-300%);
+    -webkit-transform:  translateY(-300%);
+}
+
+input[type=checkbox]:checked ~ div.rotating-pokeball {
+    transform: rotate(90deg);
+     -moz-transform:  rotate(90deg);
+    -webkit-transform:  rotate(90deg);
+}

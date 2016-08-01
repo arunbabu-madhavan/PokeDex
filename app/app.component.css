@@ -15,63 +15,11 @@ body {
     top: 0px;
     left: 0px;
 }
-
 .pokeball {
     position: relative;
-    top: 10%;
-    left: 33%;
+    top: 15%;
+    left: 31%;
     width: 500px;
     height: 500px;
-}
-
-.pokeball-red-container {
-    background-color: #f00;
-    height: 250px;
-    width: 500px;
-    float: left;
-    position: relative;
-    border-top-left-radius: 253px;
-    border-top-right-radius: 253px;
-    border: solid 3px #000;
-    transition-duration: 1s;
-    transition-delay: 2s;
-}
-
-.pokeball-white-container {
-    background-color: #fff;
-    height: 250px;
-    width: 500px;
-    float: left;
-    position: relative;
-    transition-duration: 1s;
-    transition-delay: 2s;
-    border: solid 3px #000;
-    border-bottom-left-radius: 253px;
-    border-bottom-right-radius: 253px;
-}
-
-
-
-.rotating-pokeball {
-    transition-duration: 2s;
-    float: left;
-    height: 100%;
-    width: 100%;
-}
-
-input[type=checkbox]:checked ~ div.pokeball-white-container {
-    transform: translateY(300%);
-}
-input[type=checkbox]{
-                  position:absolute;
-                  top:50%;
-                  left:50%;
-                  z-index:100;
-              }
-input[type=checkbox]:checked ~ div.pokeball-red-container {
-    transform: translateY(-300%);
-}
-
-input[type=checkbox]:checked ~ div.rotating-pokeball {
-    transform: rotate(90deg);
+    overflow: hidden;
 }
